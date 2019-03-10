@@ -1,0 +1,26 @@
+//This changes the size of the debug console, window size
+
+size(800,600);
+
+//Basic shapes
+
+//Rectangle
+
+//Draws from TrueRectangle coordinates
+
+rectMode(CENTER);
+stroke(255); //color of the boundary
+fill(155); //color within the shape
+rect(width / 2, height / 2, 150, 150); // x-position, y-position, width, height
+
+//Line
+
+stroke(0); //color of the line itself
+strokeWeight(10); //Thickness of the line
+line(80, 80, 300, 132); // x1-position, y1-position, x2-position, y2-position
+
+//Ellipse
+
+noStroke(); //removes stroke color
+fill(255, 0, 255, 150); // Red, Green, Blue, Alpha
+ellipse(width / 2, height / 2, 531, 234); //making an ellipse
