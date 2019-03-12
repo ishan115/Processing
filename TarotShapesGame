@@ -1,0 +1,24 @@
+//Tarot for Circle
+
+size(800,600);
+
+ rectMode(CENTER);
+ 
+ fill(#2c3e50);
+ rect(width / 2, height / 2, 300, 400, 60);
+ noFill();
+ 
+ fill(#16a085);
+ rect(width / 2, height / 2, 250, 350, 60);
+ noFill();
+ 
+ 
+ fill(#c0392b);
+ ellipse(width /2, 250, 100, 100);
+ noFill();
+ 
+ 
+textSize(32);
+fill(#c0392b);
+text("Circle", 360, 350); 
+noFill();
