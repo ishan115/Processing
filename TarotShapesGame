@@ -1,248 +1,281 @@
+void setup(){}
+
+class TarotGame1
+{
+  Stuff game = new Stuff();
+}
 //Tarot for Circle
 
-size(800,600);
+class Stuff
+{
+  
+  Stuff()
+  {
+     tarotCircle(); 
+     tarotCircle();
+     tarotSquare();
+     tarotDiamond();
+     tarotPacMan();
+     rngSelect1();
+     rngSelect2();
+     rngSelect3();
+     rngSelect4();
+  }
+  
+  void tarotCircle()
+  {
+    size(800,600);
+    rectMode(CENTER);
+   
+    fill(#2c3e50);
+    rect(width / 2, height / 2, 300, 400, 60);
+    noFill();
+     
+    fill(#16a085);
+    rect(width / 2, height / 2, 250, 350, 60);
+    noFill();
+     
+    fill(#c0392b);
+    ellipse(width /2, 250, 100, 100);
+    noFill();
+     
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Circle", 360, 350); 
+    noFill();
+  }
+  
+  //Tarot for Square
+  
+  void tarotSquare()
+  {
+    rectMode(CENTER);
+     
+    fill(#2c3e50);
+    rect(width / 2, height / 2, 300, 400, 60);
+    noFill();
+     
+    fill(#16a085);
+    rect(width / 2, height / 2, 250, 350, 60);
+    noFill();
+     
+    fill(#c0392b);
+    rect(width / 2, 225, 100, 100);
+    noFill();
+     
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Rectangle", 330, 350); 
+    noFill();
+  }
+  
+  //Tarot for Diamond
+  
+  void tarotDiamond()
+  {
+    rectMode(CENTER);
+     
+    fill(#8e44ad);
+    rect(width / 2, height / 2, 300, 400, 60);
+    noFill();
+     
+    fill(#16a085);
+    rect(width / 2, height / 2, 250, 350, 60);
+    noFill();
+     
+    fill(#27ae60);
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5 + 340, 50+ 200);
+    vertex(57.5+340, 15+ 200); 
+    vertex(92+ 340, 50+ 200); 
+    vertex(57.5+ 340, 85+ 200); 
+    vertex(22+ 340, 50+ 200); 
+    vertex(57.5+ 340, 15+ 200); 
+    endShape();
+    noFill();
+    
+    textSize(32);
+    fill(#c0392b);
+    text("Diamond", 330, 350); 
+    noFill();
+  }
+  
+  //Tarot for Pac-Man
+  
+  void tarotPacMan()
+  {
+    rectMode(CENTER);
+     
+    fill(#2c3e50);
+    rect(width / 2, height / 2, 300, 400, 60);
+    noFill();
+     
+    fill(#16a085);
+    rect(width / 2, height / 2, 250, 350, 60);
+    noFill();
+     
+    fill(#f1c40f);
+    arc(width / 2, 250, 80, 80, 0, PI+2.5, PIE);
+    noFill();
+    
+    textSize(32);
+    fill(#c0392b);
+    text("Pac-Man", 330, 350); 
+    noFill();
+  }
+  
+  //Randomized Selection #1 (Barely Randomized Values)
+  
+  void rngSelect1()
+  {
+    rectMode(CENTER);
+     
+    fill(#c0392b);
+    size(800,600); 
+     
+    fill(#f1c40f);
+    arc(500, 200, 80, 80, 0, PI+2.5, PIE);
+    noFill();
+    
+    fill(#27ae60);
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5 + 340+ 150, 50+ 200);
+    vertex(57.5+340, 15+ 200); 
+    vertex(92+ 340+ 150, 50+ 200); 
+    vertex(57.5+ 340, 85+ 200); 
+    vertex(22+ 340, 50+ 200); 
+    vertex(57.5+ 340+ 150, 15+ 200); 
+    endShape();
+    noFill();
+    
+    fill(#8e44ad  );
+    rect(width / 2, 225, 100, 100);
+    noFill();
+    
+    fill(#c0392b);
+    ellipse(width /2, 150, 100, 100);
+    noFill();
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Randomized Selection", 330, 500); 
+    noFill();
+  }
+  
+  //Randomized Selection #2 (Somewhat Randomized Values)
+  
+  void rngSelect2()
+  {
+    rectMode(CENTER);
+     
+    fill(#c0392b);
+    size(800,600); 
+     
+    fill(#f1c40f);
+    arc(500, 124, 80, 80, 0, PI+2.5, PIE);
+    noFill();
+    
+    fill(#27ae60);
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5 + 340+ 75, 50+ 200);
+    vertex(57.5+340, 35+ 200); 
+    vertex(92+ 340+ 57, 50+ 203); 
+    vertex(57.5+ 56, 85+ 53); 
+    vertex(22+ 57, 50+ 24); 
+    vertex(57.5+ 75+ 150, 15+ 200); 
+    endShape();
+    noFill();
+    
+    fill(#8e44ad  );
+    rect(width / 2, 225, 100, 100);
+    noFill();
+    
+    fill(#c0392b);
+    ellipse(width /2, 143, 100, 100);
+    noFill();
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Randomized Selection", 330, 500); 
+    noFill();
+  }
+  
+  //Randomized Selection #3 (More Randomized Values)
+  
+  void rngSelect3()
+  {
+    rectMode(CENTER);
+     
+    fill(#c0392b);
+    size(800,600); 
+     
+    fill(#f1c40f);
+    arc(500, 300, 80, 80, 0, PI+2.5, PIE);
+    noFill();
+    
+    fill(#27ae60);
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5 + 340+ 75, 50+ 23);
+    vertex(57.5+340, 35+ 127); 
+    vertex(92+ 340+ 57, 50+ 721); 
+    vertex(57.5+ 56, 85+ 126); 
+    vertex(22+ 57, 50+ 234); 
+    vertex(57.5+ 75+ 150, 15+ 34); 
+    endShape();
+    noFill();
+    
+    fill(#8e44ad  );
+    rect(111, 341, 100, 100);
+    noFill();
+    
+    fill(#c0392b);
+    ellipse(231, 180, 100, 100);
+    noFill();
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Randomized Selection", 330, 500); 
+    noFill();
+  }
+  
+  //Randomized Selection #4 (Super Randomized Values)
+  
+  void rngSelect4()
+  {
+    rectMode(CENTER);
+     
+    fill(#c0392b);
+    size(800,600); 
+     
+    fill(#f1c40f);
+    arc(500, 300, 132, 221, 0, PI+2.5, PIE);
+    noFill();
+    
+    fill(#27ae60);
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5 + 12+ 75, 50+ 23);
+    vertex(57.5+340, 351+ 127); 
+    vertex(92+ 340+ 577, 50+ 12); 
+    vertex(57.5+ 56, 85+ 136); 
+    vertex(22+ 57, 50+ 234); 
+    vertex(57.5+ 75+ 150, 15+ 13); 
+    endShape();
+    noFill();
+    
+    fill(#8e44ad  );
+    rect(123, 461, 111, 425);
+    noFill();
+    
+    fill(#c0392b);
+    ellipse(231, 180, 123, 560);
+    noFill();
+     
+    textSize(32);
+    fill(#c0392b);
+    text("Randomized Selection", 310, 550); 
+    noFill();
+  }
 
-rectMode(CENTER);
- 
-fill(#2c3e50);
-rect(width / 2, height / 2, 300, 400, 60);
-noFill();
- 
-fill(#16a085);
-rect(width / 2, height / 2, 250, 350, 60);
-noFill();
- 
-fill(#c0392b);
-ellipse(width /2, 250, 100, 100);
-noFill();
- 
- 
-textSize(32);
-fill(#c0392b);
-text("Circle", 360, 350); 
-noFill();
-
-//Tarot for Square
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#2c3e50);
-rect(width / 2, height / 2, 300, 400, 60);
-noFill();
- 
-fill(#16a085);
-rect(width / 2, height / 2, 250, 350, 60);
-noFill();
- 
-fill(#c0392b);
-rect(width / 2, 225, 100, 100);
-noFill();
- 
- 
-textSize(32);
-fill(#c0392b);
-text("Rectangle", 330, 350); 
-noFill();
-
-//Tarot for Diamond
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#8e44ad);
-rect(width / 2, height / 2, 300, 400, 60);
-noFill();
- 
-fill(#16a085);
-rect(width / 2, height / 2, 250, 350, 60);
-noFill();
- 
-fill(#27ae60);
-beginShape(TRIANGLE_FAN);
-vertex(57.5 + 340, 50+ 200);
-vertex(57.5+340, 15+ 200); 
-vertex(92+ 340, 50+ 200); 
-vertex(57.5+ 340, 85+ 200); 
-vertex(22+ 340, 50+ 200); 
-vertex(57.5+ 340, 15+ 200); 
-endShape();
-noFill();
-
-textSize(32);
-fill(#c0392b);
-text("Diamond", 330, 350); 
-noFill();
-
-//Tarot for Pac-Man
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#2c3e50);
-rect(width / 2, height / 2, 300, 400, 60);
-noFill();
- 
-fill(#16a085);
-rect(width / 2, height / 2, 250, 350, 60);
-noFill();
- 
-fill(#f1c40f);
-arc(width / 2, 250, 80, 80, 0, PI+2.5, PIE);
-noFill();
-
-textSize(32);
-fill(#c0392b);
-text("Pac-Man", 330, 350); 
-noFill();
-
-//Randomized Selection #1 (Barely Randomized Values)
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#c0392b);
-size(800,600); 
- 
-fill(#f1c40f);
-arc(500, 200, 80, 80, 0, PI+2.5, PIE);
-noFill();
-
-fill(#27ae60);
-beginShape(TRIANGLE_FAN);
-vertex(57.5 + 340+ 150, 50+ 200);
-vertex(57.5+340, 15+ 200); 
-vertex(92+ 340+ 150, 50+ 200); 
-vertex(57.5+ 340, 85+ 200); 
-vertex(22+ 340, 50+ 200); 
-vertex(57.5+ 340+ 150, 15+ 200); 
-endShape();
-noFill();
-
-fill(#8e44ad  );
-rect(width / 2, 225, 100, 100);
-noFill();
-
-fill(#c0392b);
-ellipse(width /2, 150, 100, 100);
-noFill();
- 
-textSize(32);
-fill(#c0392b);
-text("Randomized Selection", 330, 500); 
-noFill();
-
-//Randomized Selection #2 (Somewhat Randomized Values)
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#c0392b);
-size(800,600); 
- 
-fill(#f1c40f);
-arc(500, 124, 80, 80, 0, PI+2.5, PIE);
-noFill();
-
-fill(#27ae60);
-beginShape(TRIANGLE_FAN);
-vertex(57.5 + 340+ 75, 50+ 200);
-vertex(57.5+340, 35+ 200); 
-vertex(92+ 340+ 57, 50+ 203); 
-vertex(57.5+ 56, 85+ 53); 
-vertex(22+ 57, 50+ 24); 
-vertex(57.5+ 75+ 150, 15+ 200); 
-endShape();
-noFill();
-
-fill(#8e44ad  );
-rect(width / 2, 225, 100, 100);
-noFill();
-
-fill(#c0392b);
-ellipse(width /2, 143, 100, 100);
-noFill();
- 
-textSize(32);
-fill(#c0392b);
-text("Randomized Selection", 330, 500); 
-noFill();
-
-//Randomized Selection #3 (More Randomized Values)
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#c0392b);
-size(800,600); 
- 
-fill(#f1c40f);
-arc(500, 300, 80, 80, 0, PI+2.5, PIE);
-noFill();
-
-fill(#27ae60);
-beginShape(TRIANGLE_FAN);
-vertex(57.5 + 340+ 75, 50+ 23);
-vertex(57.5+340, 35+ 127); 
-vertex(92+ 340+ 57, 50+ 721); 
-vertex(57.5+ 56, 85+ 126); 
-vertex(22+ 57, 50+ 234); 
-vertex(57.5+ 75+ 150, 15+ 34); 
-endShape();
-noFill();
-
-fill(#8e44ad  );
-rect(111, 341, 100, 100);
-noFill();
-
-fill(#c0392b);
-ellipse(231, 180, 100, 100);
-noFill();
- 
-textSize(32);
-fill(#c0392b);
-text("Randomized Selection", 330, 500); 
-noFill();
-
-//Randomized Selection #4 (Super Randomized Values)
-
-size(800,600);
-
-rectMode(CENTER);
- 
-fill(#c0392b);
-size(800,600); 
- 
-fill(#f1c40f);
-arc(500, 300, 132, 221, 0, PI+2.5, PIE);
-noFill();
-
-fill(#27ae60);
-beginShape(TRIANGLE_FAN);
-vertex(57.5 + 12+ 75, 50+ 23);
-vertex(57.5+340, 351+ 127); 
-vertex(92+ 340+ 577, 50+ 12); 
-vertex(57.5+ 56, 85+ 136); 
-vertex(22+ 57, 50+ 234); 
-vertex(57.5+ 75+ 150, 15+ 13); 
-endShape();
-noFill();
-
-fill(#8e44ad  );
-rect(123, 461, 111, 425);
-noFill();
-
-fill(#c0392b);
-ellipse(231, 180, 123, 560);
-noFill();
- 
-textSize(32);
-fill(#c0392b);
-text("Randomized Selection", 310, 550); 
-noFill();
+}
