@@ -1,12 +1,34 @@
 //Currently not working. Class isn't calling the other class and hence the constructor isn't being called.
 
-void setup(){}
+void setup()
+{
+  size(800,600);
+}
+
+void draw() 
+{
+  //Method of choosing the images
+  
+  tarotCircle();
+  tarotSquare();
+  tarotDiamond();
+  tarotPacMan();
+  
+  //Non-Representational Images
+  
+  //By selecting the tarot cards above (randomly), the values of regular shapes get modified to 
+  //create weird abstractions. 
+  
+  rngSelect1();
+  rngSelect2();
+  rngSelect3();
+  rngSelect4();
+}
 
 //Tarot for Circle
   
   void tarotCircle()
   {
-    size(800,600);
     rectMode(CENTER);
    
     fill(#2c3e50);
