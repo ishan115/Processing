@@ -1,10 +1,13 @@
-//Drawing circles with variables
+//drawing circles with variables
+
 
 //global variables
 int d1 = 800; // x diameter of ellipse
 int d2 = 800; //y diameter of ellipse
 
-int c = 0; //color
+int c1 = 0; //color1
+int c2 = 0; //color2
+int c3 = 0; //color3
 
 int i = 0; // generic integer
 
@@ -17,11 +20,27 @@ void setup()
 
 void draw()
 {
-  while(i < 20)
+  while(i < 55)
   {
-    fill(c);
+    fill(c1);  //, random(c2), random(c3));
     ellipse(width / 2, height / 2, d1, d2);
-  }
+    
+    d1 -= 15; //d1 = d1 - 15;
+    d2 -= 15; //d2 = d2 - 15;
+    
+    c1 += 5; //c = c + 5 ;
+    c2 += 5;
+    c3 += 5;
+    
+    i++; //i = i + 1;
+    
+    /*Hiding stuff
+    
+    Hello! I am Ishan
+    
+    */
+    
+  } //close while loop
   
   
   
