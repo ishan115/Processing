@@ -1,0 +1,19 @@
+//interactive drawing tool
+
+void setup()
+{
+   size(800,600); 
+   background(255);
+} //close setup
+
+void draw()
+{
+    color rainbow = color(random(255),random(255),random(255),random(100,200));
+    noStroke();
+  
+    if(mousePressed)
+    {
+      fill(rainbow);
+      ellipse(mouseX, mouseY, random(20, 150), random(60, 150));
+    }  //close if statement
+} //close draw
