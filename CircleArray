@@ -3,7 +3,7 @@
 
 //Global Variables
 
-int[] colorz = {5, 10, 15, 20, 99, 150, 250, 255}; //color value
+int[] colorz = {5, 50, 100, 150, 200, 250}; //color value
 int[] x = {0, 100, 200, 300, 400, 500, 600}; //x position
 int[] y = {0, 100, 200, 300, 400, 500, 600}; //y position
 
@@ -16,12 +16,15 @@ void setup()
 
 void draw()
 {
+  /*
   fill(colorz[2]);
   ellipse(width / 2, height / 2 , x[6], y[6]);
   
   fill(colorz[5]);
   ellipse(x[4], y[4], 200, 300);
+  */
   
+  //Casting of random numbers to a variable
   int a = int(random(0,4));
   int b = int(random(0,6));
   
@@ -31,6 +34,6 @@ void draw()
   */
   
   fill(colorz[a]);
-  ellipse(x[b], y[b], 200, 300);
+  ellipse(x[b], y[b], 300, 300);
   
 } //close draw
