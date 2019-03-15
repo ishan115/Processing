@@ -1,0 +1,32 @@
+//Self-guided movement with variation
+//make 500 random bloodcells
+
+//global variables
+int cellCount = 500;
+float[] xCellSize = new float[cellCount];
+float[] yCellSize = new float[cellCount];
+float[] xPosition = new float[cellCount];
+float[] yPosition = new float[cellCount];
+
+void setup()
+{
+  size(800,600);
+  background(92, 0, 0); //Dark red
+  noStroke();
+  
+  for(int i = 0; i < cellCount; i++)
+  {
+    xCellSize[i] = random(20,50);
+    yCellSize[i] = random(20,50);
+    xPosition[i] = random(width, height);
+    yPosition[i] = random(width, height);
+  }
+} //close setup
+
+void draw()
+{
+  
+  
+  
+} //close draw
+
