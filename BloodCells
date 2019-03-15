@@ -23,7 +23,7 @@ void setup()
     xCellSize[i] = random(20,50);
     yCellSize[i] = random(20,50);
     xPosition[i] = random(width);
-    yPosition[i] = random(width);
+    yPosition[i] = random(height);
     xSpeed[i] = random(-4, 4);
     ySpeed[i] = random(-4, 4);
   }
