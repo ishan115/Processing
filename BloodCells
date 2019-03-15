@@ -5,8 +5,12 @@
 int cellCount = 500;
 float[] xCellSize = new float[cellCount];
 float[] yCellSize = new float[cellCount];
+
 float[] xPosition = new float[cellCount];
 float[] yPosition = new float[cellCount];
+
+float[] xSpeed = new float[cellCount];
+float[] ySpeed = new float[cellCount];
 
 void setup()
 {
@@ -18,19 +22,24 @@ void setup()
   {
     xCellSize[i] = random(20,50);
     yCellSize[i] = random(20,50);
-    xPosition[i] = random(width, height);
-    yPosition[i] = random(width, height);
+    xPosition[i] = random(width);
+    yPosition[i] = random(width);
+    xSpeed[i] = random(-4, 4);
+    ySpeed[i] = random(-4, 4);
   }
 } //close setup
 
 void draw()
 {
-  fill(255, 0, 0);
+  fill(255, 0, 0, 100);
   noStroke();
   
   for(int i = 0; i < cellCount; i++)
   {
-  ellipse(xPosition[i], yPosition[i], xCellSize[i], yCellSize[i]);
+    xPosition[i] += xSpeed[i];
+    yPosition[i] += ySpeed[i];
+    
+    ellipse(xPosition[i], yPosition[i], xCellSize[i], yCellSize[i]);
   }
   
   
