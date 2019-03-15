@@ -25,7 +25,13 @@ void setup()
 
 void draw()
 {
+  fill(255, 0, 0);
+  noStroke();
   
+  for(int i = 0; i < cellCount; i++)
+  {
+  ellipse(xPosition[i], yPosition[i], xCellSize[i], yCellSize[i]);
+  }
   
   
 } //close draw
