@@ -1,0 +1,8 @@
+//Drawing circles with variables and arrays
+
+
+//Global Variables
+
+int[] colorz = {5, 10, 15, 20, 99, 150, 250, 255};
+int[] x = {0, 100, 200, 300, 400, 500, 600};
+int[] y = {0, 100, 200, 300, 400, 500, 600};
