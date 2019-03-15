@@ -1,0 +1,28 @@
+//Drawing circles with variables
+
+//global variables
+int d1 = 800; // x diameter of ellipse
+int d2 = 800; //y diameter of ellipse
+
+int c = 0; //color
+
+int i = 0; // generic integer
+
+void setup()
+{
+  size(800,800);
+  background(random(255), random(255), random(255));
+  noStroke();
+} //close setup
+
+void draw()
+{
+  while(i < 20)
+  {
+    fill(c);
+    ellipse(width / 2, height / 2, d1, d2);
+  }
+  
+  
+  
+} //close draw
