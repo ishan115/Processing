@@ -15,15 +15,17 @@ float[] ySpeed = new float[cellCount];
 void setup()
 {
   size(800,600);
-  background(92, 0, 0); //Dark red
+  
   noStroke();
   
   for(int i = 0; i < cellCount; i++)
   {
     xCellSize[i] = random(20,50);
     yCellSize[i] = random(20,50);
+    
     xPosition[i] = random(width);
     yPosition[i] = random(height);
+    
     xSpeed[i] = random(-4, 4);
     ySpeed[i] = random(-4, 4);
   }
@@ -31,7 +33,8 @@ void setup()
 
 void draw()
 {
-  fill(255, 0, 0, 100);
+  background(92, 0, 0); //Dark red
+  fill(255, 0, 0, 50);
   noStroke();
   
   for(int i = 0; i < cellCount; i++)
