@@ -1,0 +1,163 @@
+//Minecraft steve through processing
+//Every time one plays this program, a random face proportion will be generated.
+//Can you find the perfect one?
+
+//Global Variables
+int eyeY = 230;
+int pixelSize = 20;
+int filling1 = 100;
+int faceWidth = 200;
+
+int[] funStuff = {0, 50, 100, 150, 200, 250}; //new face proprotion generator
+int a = int(random(0, 5)); //generate random index number between 0 and 9
+
+void setup()
+{
+  size(800,800);
+  background(random(0,255), random(0,255), random(0,255));
+} // close setup
+
+void draw()
+{
+  createHair();
+  createFaceBorder();
+  createFacePolish();
+  neck();
+  body();
+  hands();
+  legs();
+  shoes();
+  
+} //close draw
+
+
+void createHair()
+{
+  
+  fill(63, 36, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(340, faceWidth, pixelSize, pixelSize); //left hair pixel
+  
+  fill(63, 36, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(460, faceWidth, pixelSize, pixelSize); //right hair pixel
+  
+  fill(51, 19, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(width / 2, 180, 140, pixelSize); //hairline
+  
+} //close hair
+  
+void createFaceBorder()
+{
+  
+  fill(214, 146, 107);
+  rectMode(CENTER);
+  noStroke();
+  rect(400, faceWidth, filling1, pixelSize); //in-between face
+  
+  fill(214, 146, 107);
+  rectMode(CENTER);
+  noStroke();
+  for (int i = 20; i < 100; i++){
+    rect(width / 2, 260, 140, funStuff[a]);
+  } //face
+  
+} //close face outline
+
+void createFacePolish()
+{
+  fill(255);
+  rectMode(CENTER);
+  noStroke();
+  rect(360, eyeY, pixelSize, pixelSize); //white left eye portion
+  
+  fill(44, 75, 163);
+  rectMode(CENTER);
+  noStroke();
+  rect(380, eyeY, pixelSize, pixelSize); //blue left eye portion
+  
+  fill(255);
+  rectMode(CENTER);
+  noStroke();
+  rect(440, eyeY, pixelSize, pixelSize); //white right eye portion
+  
+  fill(44, 75, 163);
+  rectMode(CENTER);
+  noStroke();
+  rect(420, eyeY, pixelSize, pixelSize); //blue right eye portion
+  
+  fill(96, 54, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(400, 250, pixelSize, pixelSize); //nose
+  
+  for (int i = 20; i < 80; i++)
+  {
+  fill(63, 36, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(450 - i, 300, pixelSize, pixelSize); //mouth
+  } //close for loop
+  
+  fill(63, 36, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(430, 280, pixelSize, pixelSize); //left smile
+  
+  fill(63, 36, 0);
+  rectMode(CENTER);
+  noStroke();
+  rect(371, 280, pixelSize, pixelSize); //right smile
+  
+} //close face polish
+
+void neck()
+{
+  fill(214, 146, 107);
+  rectMode(CENTER);
+  rect(width / 2, 320, 79, 20); //neck up
+  
+  fill(214, 146, 107);
+  rectMode(CENTER);
+  rect(width / 2, 340, 79 / 2, 20); //neck down
+  
+} //close neck
+
+void body()
+{
+  fill(0, 180, 255);
+  rectMode(CENTER);
+  rect(width / 2, 430, faceWidth * 2.75 / 2, faceWidth * 1.25); //blue shirt
+  
+} //close body
+
+void hands()
+{
+  fill(220, 130, 90);
+  rectMode(CENTER);
+  rect(302, 475, faceWidth / 2.5, faceWidth / 1.25); //left hand
+  
+  fill(220, 130, 90);
+  rectMode(CENTER);
+  rect(498, 475, faceWidth / 2.5, faceWidth / 1.25); //right hand
+ 
+} //close hands
+
+void legs()
+{
+  fill(150, 150, 255);
+  rectMode(CENTER);
+  rect(400, 635, 116, faceWidth / 1.25); //legs
+  
+} //close legs
+
+void shoes()
+{
+  fill(175);
+  rectMode(CENTER);
+  rect(400, 725, 116, 40); //shoes
+}
